@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:member
+    username: dante
+    password: qwerty
+    driverClassName: org.h2.Driver
+  h2:
+    console.enabled: true
+  liquibase:
+    change-log: db/master.xml

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Кто Вы из "Звездных войн"</title>
+    <link href="pic_char/logo.jpeg" rel="shortcut icon" type="image/x-icon" />
+    <script src="scripts/jquery-3.6.0.js"></script>
+
+</head>
+<body>
+
+  <style>
+  @font-face {
+   font-family: Star Jedi_Cyrillic;
+   src: url("14687.otf") format("opentype");
+ }
+   </style>
+
+<h1 style="font-size: 300%; font-family: Star Jedi_Cyrillic; color: #ffffcc; text-align: center">Тест "Кто Вы из вселенной Звездных войн"</h1>
+<div class="wrap">
+    <div style="font-size: 250%; font-family: Star Jedi_Cyrillic; color: #ffffcc; text-align: center">Таблица результатов</div>
+</div>
+
+<style>
+	body {
+		background: #000 url(pic_fon/fon1.jpg);
+		color: #fff;
+		background-attachment: fixed;
+		background-repeat: repeat-x;
+		background-size: 100%;
+	}
+ </style>
+
+<style>
+   .wrap div {
+    color: #ffffcc;
+    margin-left: 3%;
+  }
+</style>
+
+  <div>
+      <table class="table">
+          <thread>
+              <tr>
+                  <th>
+                      <div class="container">
+                          <div class="row">
+                              <div class="column">
+                                  <table class="table1" id="myTable">
+                                      <thead>
+                                      <tr>
+                                          <th style="font-size: 170%; font-family: Star Jedi_Cyrillic; color: #ffffcc; padding: 5px; text-align: center;">Имя</th>
+                                          <th style="font-size: 170%; font-family: Star Jedi_Cyrillic; color: #ffffcc; padding: 5px; text-align: center;">Персонаж</th>
+                                      </tr>
+                                      </thead>
+                                      <tbody id="table-content"/>
+                                  </table>
+                              </div>
+                          </div>
+                          <div class="row">
+                              <div class="col">
+                              </div>
+                          </div>
+                      </div>
+                  </th>
+                  <th>
+                      <form id="saveMemberForm">
+                          <div class="mb-3">
+                              <label for="NameInput">Ваше имя: </label>
+                              <input type="text" id="NameInput">
+                          </div>
+                          <div class="mb-3">
+                              <label for="CharacterInput">Ваш Персонаж: </label>
+                              <input type="text" id="CharacterInput">
+                          </div>
+                          <button id="submit" type="submit" class="button-primary" style="font-size: 60%; font-family: Star Jedi_Cyrillic; background: #ffffcc; color: #00004d; padding: 5px; margin-top: 20px">Записать результат</button>
+                          <input type="button" id="filter" name="filter" value="Очистить таблицу" />
+
+                      </form>
+                  </th>
+              </tr>
+          </thread>
+      </table>
+  </div>
+
+  <style>
+
+ #filter{
+ font-size: 60%; font-family: Star Jedi_Cyrillic; background: #ffffcc; color: #00004d; padding: 5px; margin-top: 20px;
+ }
+
+
+
+.table {
+	width: 100%;
+	margin-top: 20px;
+}
+.table th{
+	width: 50%;
+}
+.table td{
+	width: 100px;
+}
+.table1 {
+	width: 40%;
+	font-size: 170%;
+	margin-bottom: 20px;
+	border: 1px solid #dddddd;
+	font-family: Star Jedi_Cyrillic;
+}
+.table1 th {
+  font-size: 80%;
+	padding: 5px;
+	border: 1px solid #dddddd;
+	font-family: Star Jedi_Cyrillic;
+    color: #ffffcc;
+}
+.table1 td {
+  padding: 15px;
+  margin: 20px;
+  border: 1px solid #dddddd;
+  width: 200px;
+  font-size: 80%;
+  font-family: Star Jedi_Cyrillic;
+  color: #ffffcc;
+}
+
+#saveMemberForm{
+  font-size: 170%;
+  font-family: Star Jedi_Cyrillic;
+  color: #ffffcc;
+  padding: 50px;
+}
+#NameInput{
+  font-family: Star Jedi_Cyrillic;
+  margin-left: 18%;
+  }
+#CharacterInput{
+  font-family: Star Jedi_Cyrillic;
+  margin-left: 4%;
+}
+#submit{
+text-align: center;
+}
+
+</style>
+
+  <script>
+
+  $(function(){
+    $("#filter").click(function(){
+        $('#myTable tbody').empty();
+    });
+});
+
+    function buildTable() {
+        $("#table-content").empty()
+        $.get("/members").done(function (data) {
+
+            $.each(data, function () {
+                var row = "<tr><td>" + this.name + "</td><td>" + this.character + "</td></tr>";
+                console.log(data)
+                $("#table-content").append(row)
+            })
+        })
+    }
+
+    function saveMember() {
+        $.post("/members", function () {
+        }, {name: $("#NameInput").val(), character: $("#CharacterInput").val()})
+    }
+
+    $("#saveMemberForm").submit(function (event) {
+
+        // Stop form from submitting normally
+        event.preventDefault();
+
+        $.ajax({
+                data: JSON.stringify({
+                    name: $("#NameInput").val(),
+                    character: $("#CharacterInput").val()
+                }),
+                method: "POST",
+                url: "/members",
+                contentType: "application/json"
+            }
+        ).done(function (data) {
+            buildTable();
+            $("#NameInput").val("")
+            $("#CharacterInput").val("")
+        }).fail(function (){
+            alert("Failed");
+        })
+    });
+
+    buildTable()
+</script>
+
+
+<div id="button1">
+<form action="index.html" target="_self">
+  <button style="font-size: 180%; font-family: Star Jedi_Cyrillic; background: #ffffcc; color: #00004d; margin-left: 25%; padding: 5px">Вернуться в меню</button>
+</form>
+</div>
+
+ <div id="button2">
+<form action="partOne.html" target="_self">
+  <button style="font-size: 180%; font-family: Star Jedi_Cyrillic; background: #ffffcc; color: #00004d; margin-right: 25%; padding: 5px">Пройти тест еще раз</button>
+</form>
+</div>
+
+<style>
+#button1 {
+  margin-top: 40px;
+  margin-bottom: 100px;
+  float: left;
+  width: 550px;
+  }
+
+#button2 {
+    margin-top: 40px;
+    float: right;
+    width: 550px;
+    margin-bottom: 100px;
+  }
+</style>
+</body>
+</html>

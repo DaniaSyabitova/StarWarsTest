@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Тест</title>
+    <link href="pic_char/logo.jpeg" rel="shortcut icon" type="image/x-icon" />
+</head>
+<body>
+
+  <style>
+  @font-face {
+   font-family: Star Jedi_Cyrillic;
+   src: url("14687.otf") format("opentype");
+ }
+   </style>
+
+<h1 style="font-size: 400%; text-align: center; margin-top: 15px; font-family: Star Jedi_Cyrillic; color: #ffffcc">Тест "Кто ты из Звездных войн"</h1>
+<h1 style="font-size: 350%; text-align: center; margin-top: 15px; font-family: Star Jedi_Cyrillic; color: #ffffcc">Часть 1</h1>
+
+<style>
+  .answer {
+      font-size: 130%;
+      text-align: center;
+      margin-top: 15px;
+      font-family: Star Jedi_Cyrillic;
+      background: #ffffcc;
+      color: #00004d;
+      margin-left: 20%;
+      margin-right: 20%;
+    }
+</style>
+
+
+<section class="main">
+<form name="quiz" action="javascript:check();" class="quizform">
+
+<div class="quizsection">
+	<h2 style="font-size: 180%; text-align: center; margin-top: 15px; font-family: Star Jedi_Cyrillic; color: #ffffcc">1. Вы можете назвать себя терпеливым человеком:</h2>
+	<div class="answer"><input name="q1" value="1" id="value1" type="radio"/>Совершенно не согласен</div>
+	<div class="answer"><input name="q1" value="2" id="value2" type="radio"/>Не согласен</div>
+  <div class="answer"><input name="q1" value="3" id="value3" type="radio"/>Затрудняюсь с ответом</div>
+  <div class="answer"><input name="q1" value="4" id="value4" type="radio"/>Согласен</div>
+  <div class="answer"><input name="q1" value="5" id="value5" type="radio"/>Совершенно согласен</div>
+</div>
+
+<div class="quizsection">
+	<h2 style="font-size: 180%; text-align: center; margin-top: 15px; font-family: Star Jedi_Cyrillic; color: #ffffcc">2. Вы легко прощаете людей и отпускаете обиды:</h2>
+	<div class="answer"><input name="q2" value="1" id="value1" type="radio"/>Совершенно не согласен</div>
+	<div class="answer"><input name="q2" value="2" id="value2" type="radio"/>Не согласен</div>
+  <div class="answer"><input name="q2" value="3" id="value3" type="radio"/>Затрудняюсь с ответом</div>
+  <div class="answer"><input name="q2" value="4" id="value4" type="radio"/>Согласен</div>
+  <div class="answer"><input name="q2" value="5" id="value5" type="radio"/>Совершенно согласен</div>
+</div>
+
+<div class="quizsection">
+	<h2 style="font-size: 180%; text-align: center; margin-top: 15px; font-family: Star Jedi_Cyrillic; color: #ffffcc">3. Вы предпочитаете решать конфликты словами, а не грубой силой:</h2>
+	<div class="answer"><input name="q3" value="1" id="value1" type="radio"/>Совершенно не согласен</div>
+	<div class="answer"><input name="q3" value="2" id="value2" type="radio"/>Не согласен</div>
+  <div class="answer"><input name="q3" value="3" id="value3" type="radio"/>Затрудняюсь с ответом</div>
+  <div class="answer"><input name="q3" value="4" id="value4" type="radio"/>Согласен</div>
+  <div class="answer"><input name="q3" value="5" id="value5" type="radio"/>Совершенно согласен</div>
+</div>
+
+<div class="quizsection">
+	<h2 style="font-size: 180%; text-align: center; margin-top: 15px; font-family: Star Jedi_Cyrillic; color: #ffffcc">4. У вас хорошо получается скрывать свои эмоции и мотивы при необходимости:</h2>
+	<div class="answer"><input name="q4" value="1" id="value1" type="radio"/>Совершенно не согласен</div>
+	<div class="answer"><input name="q4" value="2" id="value2" type="radio"/>Не согласен</div>
+  <div class="answer"><input name="q4" value="3" id="value3" type="radio"/>Затрудняюсь с ответом</div>
+  <div class="answer"><input name="q4" value="4" id="value4" type="radio"/>Согласен</div>
+  <div class="answer"><input name="q4" value="5" id="value5" type="radio"/>Совершенно согласен</div>
+</div>
+
+<div class="quizsection">
+	<h2 style="font-size: 180%; text-align: center; margin-top: 15px; font-family: Star Jedi_Cyrillic; color: #ffffcc">5. Вы - ответсвенный человек:</h2>
+	<div class="answer"><input name="q5" value="1" id="value1" type="radio"/>Совершенно не согласен</div>
+	<div class="answer"><input name="q5" value="2" id="value2" type="radio"/>Не согласен</div>
+  <div class="answer"><input name="q5" value="3" id="value3" type="radio"/>Затрудняюсь с ответом</div>
+  <div class="answer"><input name="q5" value="4" id="value4" type="radio"/>Согласен</div>
+  <div class="answer"><input name="q5" value="5" id="value5" type="radio"/>Совершенно согласен</div>
+</div>
+
+<div class="quizsection">
+	<h2 style="font-size: 180%; text-align: center; margin-top: 15px; font-family: Star Jedi_Cyrillic; color: #ffffcc">6. Вы любите учиться чему-то новому:</h2>
+	<div class="answer"><input name="q6" value="1" id="value1" type="radio"/>Совершенно не согласен</div>
+	<div class="answer"><input name="q6" value="2" id="value2" type="radio"/>Не согласен</div>
+  <div class="answer"><input name="q6" value="3" id="value3" type="radio"/>Затрудняюсь с ответом</div>
+  <div class="answer"><input name="q6" value="4" id="value4" type="radio"/>Согласен</div>
+  <div class="answer"><input name="q6" value="5" id="value5" type="radio"/>Совершенно согласен</div>
+</div>
+
+<div class="quizsection">
+	<h2 style="font-size: 180%; text-align: center; margin-top: 15px; font-family: Star Jedi_Cyrillic; color: #ffffcc">7. Вам нравится путешествовать (особенно своим ходом):</h2>
+	<div class="answer"><input name="q7" value="1" id="value1" type="radio"/>Совершенно не согласен</div>
+	<div class="answer"><input name="q7" value="2" id="value2" type="radio"/>Не согласен</div>
+  <div class="answer"><input name="q7" value="3" id="value3" type="radio"/>Затрудняюсь с ответом</div>
+  <div class="answer"><input name="q7" value="4" id="value4" type="radio"/>Согласен</div>
+  <div class="answer"><input name="q7" value="5" id="value5" type="radio"/>Совершенно согласен</div>
+</div>
+
+<div class="quizsection">
+	<h2 style="font-size: 180%; text-align: center; margin-top: 15px; font-family: Star Jedi_Cyrillic; color: #ffffcc">8. Вы считаете себя достаточно мудрым и опытным, чтобы передавать свои знания:</h2>
+	<div class="answer"><input name="q8" value="1" id="value1" type="radio"/>Совершенно не согласен</div>
+	<div class="answer"><input name="q8" value="2" id="value2" type="radio"/>Не согласен</div>
+  <div class="answer"><input name="q8" value="3" id="value3" type="radio"/>Затрудняюсь с ответом</div>
+  <div class="answer"><input name="q8" value="4" id="value4" type="radio"/>Согласен</div>
+  <div class="answer"><input name="q8" value="5" id="value5" type="radio"/>Совершенно согласен</div>
+</div>
+
+<div class="quizsection">
+	<h2 style="font-size: 180%; text-align: center; margin-top: 15px; font-family: Star Jedi_Cyrillic; color: #ffffcc">9. Если вам приходится лгать, то Вы делаете это мастерски:</h2>
+	<div class="answer"><input name="q9" value="1" id="value1" type="radio"/>Совершенно не согласен</div>
+	<div class="answer"><input name="q9" value="2" id="value2" type="radio"/>Не согласен</div>
+  <div class="answer"><input name="q9" value="3" id="value3" type="radio"/>Затрудняюсь с ответом</div>
+  <div class="answer"><input name="q9" value="4" id="value4" type="radio"/>Согласен</div>
+  <div class="answer"><input name="q9" value="5" id="value5" type="radio"/>Совершенно согласен</div>
+</div>
+
+<div class="quizsection">
+	<h2 style="font-size: 180%; text-align: center; margin-top: 15px; font-family: Star Jedi_Cyrillic; color: #ffffcc">10. Вы всегда в точности исполняете данные Вам поручения, даже если они Вам не нравятся:</h2>
+	<div class="answer"><input name="q10" value="1" id="value1" type="radio"/>Совершенно не согласен</div>
+	<div class="answer"><input name="q10" value="2" id="value2" type="radio"/>Не согласен</div>
+  <div class="answer"><input name="q10" value="3" id="value3" type="radio"/>Затрудняюсь с ответом</div>
+  <div class="answer"><input name="q10" value="4" id="value4" type="radio"/>Согласен</div>
+  <div class="answer"><input name="q10" value="5" id="value5" type="radio"/>Совершенно согласен</div>
+</div>
+
+<div class="quizsection">
+	<h2 style="font-size: 180%; text-align: center; margin-top: 15px; font-family: Star Jedi_Cyrillic; color: #ffffcc">11. Вы любите, когда люди делают так, как Вы им советуете:</h2>
+	<div class="answer"><input name="q11" value="1" id="value1" type="radio"/>Совершенно не согласен</div>
+	<div class="answer"><input name="q11" value="2" id="value2" type="radio"/>Не согласен</div>
+  <div class="answer"><input name="q11" value="3" id="value3" type="radio"/>Затрудняюсь с ответом</div>
+  <div class="answer"><input name="q11" value="4" id="value4" type="radio"/>Согласен</div>
+  <div class="answer"><input name="q11" value="5" id="value4" type="radio"/>Совершенно согласен</div>
+</div>
+
+<div class="quizsection">
+	<h2 style="font-size: 180%; text-align: center; margin-top: 15px; font-family: Star Jedi_Cyrillic; color: #ffffcc">12. Если Вы начали дело, то обязательно доведёте его до конца, чего бы вам это ни стоило:</h2>
+	<div class="answer"><input name="q12" value="1" id="value1" type="radio"/>Совершенно не согласен</div>
+	<div class="answer"><input name="q12" value="2" id="value2" type="radio"/>Не согласен</div>
+  <div class="answer"><input name="q12" value="3" id="value3" type="radio"/>Затрудняюсь с ответом</div>
+  <div class="answer"><input name="q12" value="4" id="value4" type="radio"/>Согласен</div>
+  <div class="answer"><input name="q12" value="5" id="value5" type="radio"/>Совершенно согласен</div>
+</div>
+
+<div class="quizsection">
+	<h2 style="font-size: 180%; text-align: center; margin-top: 15px; font-family: Star Jedi_Cyrillic; color: #ffffcc">13. Вы - совестливый человек:</h2>
+	<div class="answer"><input name="q13" value="1" id="value1" type="radio"/>Совершенно не согласен</div>
+	<div class="answer"><input name="q13" value="2" id="value2" type="radio"/>Не согласен</div>
+  <div class="answer"><input name="q13" value="3" id="value3" type="radio"/>Затрудняюсь с ответом</div>
+  <div class="answer"><input name="q13" value="4" id="value4" type="radio"/>Согласен</div>
+  <div class="answer"><input name="q13" value="5" id="value5" type="radio"/>Совершенно согласен</div>
+</div>
+
+<div class="quizsection">
+	<h2 style="font-size: 180%; text-align: center; margin-top: 15px; font-family: Star Jedi_Cyrillic; color: #ffffcc">14. Большую часть времени Вы продуктивны и работоспособны:</h2>
+	<div class="answer"><input name="q14" value="1" id="value1" type="radio"/>Совершенно не согласен</div>
+	<div class="answer"><input name="q14" value="2" id="value2" type="radio"/>Не согласен</div>
+  <div class="answer"><input name="q14" value="3" id="value3" type="radio"/>Затрудняюсь с ответом</div>
+  <div class="answer"><input name="q14" value="4" id="value4" type="radio"/>Согласен</div>
+  <div class="answer"><input name="q14" value="5" id="value5" type="radio"/>Совершенно согласен</div>
+</div>
+
+<div class="quizsection">
+	<h2 style="font-size: 180%; text-align: center; margin-top: 15px; font-family: Star Jedi_Cyrillic; color: #ffffcc">15. Ради достижения своей цели Вы готовы пойти на жертвы:</h2>
+	<div class="answer"><input name="q15" value="1" id="value1" type="radio"/>Совершенно не согласен</div>
+	<div class="answer"><input name="q15" value="2" id="value2" type="radio"/>Не согласен</div>
+  <div class="answer"><input name="q15" value="3" id="value3" type="radio"/>Затрудняюсь с ответом</div>
+  <div class="answer"><input name="q15" value="4" id="value4" type="radio"/>Согласен</div>
+  <div class="answer"><input name="q15" value="5" id="value5" type="radio"/>Совершенно согласен</div>
+</div>
+
+<h1 style="font-size: 350%; text-align: center; margin-top: 30px; font-family: Star Jedi_Cyrillic; color: #ffffcc">Часть 2</h1>
+
+<div class="quizsection">
+	<h2 style="font-size: 180%; text-align: center; margin-top: 15px; font-family: Star Jedi_Cyrillic; color: #ffffcc">1. Что Вы больше всего цените в людях?</h2>
+	<div class="answer"><input name="q16" value="1" id="value1" type="radio"/>1) Авторитет и влияние</div>
+	<div class="answer"><input name="q16" value="2" id="value2" type="radio"/>2) Юмор и находчивость</div>
+  <div class="answer"><input name="q16" value="3" id="value3" type="radio"/>3) Храбрость и авантюризм</div>
+  <div class="answer"><input name="q16" value="4" id="value4" type="radio"/>4) Доброту и чуткость</div>
+  <div class="answer"><input name="q16" value="5" id="value5" type="radio"/>5) Мудрость и покровительство</div>
+  <div class="answer"><input name="q16" value="6" id="value6" type="radio"/>6) Честность и верность</div>
+</div>
+
+<div class="quizsection">
+	<h2 style="font-size: 180%; text-align: center; margin-top: 15px; font-family: Star Jedi_Cyrillic; color: #ffffcc">2. Какие негативные черты из нижеперечисленных проявляются в вас наиболее явно?</h2>
+	<div class="answer"><input name="q17" value="1" id="value1" type="radio"/>1) Нетерпеливость и гневливость</div>
+	<div class="answer"><input name="q17" value="2" id="value2" type="radio"/>2) Безрассудность и беспечность</div>
+  <div class="answer"><input name="q17" value="3" id="value3" type="radio"/>3) Мстительность и одержимость</div>
+  <div class="answer"><input name="q17" value="4" id="value4" type="radio"/>4) Властность и честолюбие</div>
+  <div class="answer"><input name="q17" value="5" id="value5" type="radio"/>5) Безропотность и покорность</div>
+  <div class="answer"><input name="q17" value="5" id="value6" type="radio"/>6) Ничего из этого</div>
+</div>
+
+<div class="quizsection">
+	<h2 style="font-size: 180%; text-align: center; margin-top: 15px; font-family: Star Jedi_Cyrillic; color: #ffffcc">3. Какой транспорт вы предпочитаете? </h2>
+	<div class="answer"><input name="q18" value="1" id="value1" type="radio"/>1) Машина или поезд</div>
+	<div class="answer"><input name="q18" value="2" id="value2" type="radio"/>2) Самолет</div>
+  <div class="answer"><input name="q18" value="3" id="value3" type="radio"/>3) Нет ничего лучше своих двоих</div>
+</div>
+
+<div class="quizsection">
+	<h2 style="font-size: 180%; text-align: center; margin-top: 15px; font-family: Star Jedi_Cyrillic; color: #ffffcc">4. Что Вы делаете после конфликта с кем-либо?</h2>
+	<div class="answer"><input name="q19" value="1" id="value1" type="radio"/>1) Делаю вид, что все с порядке, а сам годами вынашиваю план изощренной мести</div>
+	<div class="answer"><input name="q19" value="2" id="value2" type="radio"/>2) Страшно обижаюсь и нарываюсь на ссору при любом удобном случае</div>
+  <div class="answer"><input name="q19" value="3" id="value3" type="radio"/>3) Проявляю снисхождение, даже если мои чувства задеты</div>
+  <div class="answer"><input name="q19" value="4" id="value4" type="radio"/>4) Одной мелкой пакости хватит, чтобы утешить моё самолюбие</div>
+  <div class="answer"><input name="q19" value="5" id="value5" type="radio"/>5) Кому вообще придет в голову меня обидеть?</div>
+</div>
+
+
+<div class="quizsection">
+	<h2 style="font-size: 180%; text-align: center; margin-top: 15px; font-family: Star Jedi_Cyrillic; color: #ffffcc">5. Что для Вас важнее?</h2>
+	<div class="answer"><input name="q20" value="1" id="value1" type="radio"/>1) Знания и опыт</div>
+	<div class="answer"><input name="q20" value="2" id="value2" type="radio"/>2) Семья и дружба</div>
+  <div class="answer"><input name="q20" value="3" id="value3" type="radio"/>3) Развлечения и азарт</div>
+  <div class="answer"><input name="q20" value="4" id="value4" type="radio"/>4) Учеба и саморазвитие</div>
+  <div class="answer"><input name="q20" value="5" id="value5" type="radio"/>5) Чувства и эмоции</div>
+  <div class="answer"><input name="q20" value="5" id="value6" type="radio"/>6) Власть и сила</div>
+  <div class="answer"><input name="q20" value="5" id="value7" type="radio"/>7) Юмор и харизма</div>
+</div>
+
+
+<div class="quizsection">
+	<h2 style="font-size: 180%; text-align: center; margin-top: 15px; font-family: Star Jedi_Cyrillic; color: #ffffcc">6. Вы накосячили. Что будете делать?</h2>
+	<div class="answer"><input name="q21" value="1" id="value1" type="radio"/>1) Признаю ошибку и предоставлю ситуацию воле судьбы</div>
+	<div class="answer"><input name="q21" value="2" id="value2" type="radio"/>2) Признаю ошибку и всеми силами буду стараться её исправить</div>
+  <div class="answer"><input name="q21" value="3" id="value3" type="radio"/>3) Я не допускаю ошибок</div>
+</div>
+
+
+<div class="quizsection">
+	<h2 style="font-size: 180%; text-align: center; margin-top: 15px; font-family: Star Jedi_Cyrillic; color: #ffffcc">7. Ваш друг стал вести себя не так, как раньше, и вот-вот попадет в беду. Что будете делать?</h2>
+	<div class="answer"><input name="q22" value="1" id="value1" type="radio"/>1) Оставлю все, как есть. Пусть сам принимает решения, это его жизнь</div>
+	<div class="answer"><input name="q22" value="2" id="value2" type="radio"/>2) Всеми силами попытаюсь вернуть его и внушить, что он неправ</div>
+  <div class="answer"><input name="q22" value="3" id="value3" type="radio"/>3) Я и есть тот друг</div>
+</div>
+
+
+<div class="quizsection">
+	<h2 style="font-size: 180%; text-align: center; margin-top: 15px; font-family: Star Jedi_Cyrillic; color: #ffffcc">8. Чем вы можете похвастаться?</h2>
+	<div class="answer"><input name="q23" value="1" id="value1" type="radio"/>1) Я могу ловко влиять на людей и заставить их поверить в мои слова</div>
+	<div class="answer"><input name="q23" value="2" id="value2" type="radio"/>2) Я легко поддаюсь обучению и обладаю многими навыками</div>
+  <div class="answer"><input name="q23" value="3" id="value3" type="radio"/>3) Я упорный и целеустремленный</div>
+  <div class="answer"><input name="q23" value="4" id="value4" type="radio"/>4) Я хитрый и проворный</div>
+  <div class="answer"><input name="q23" value="5" id="value5" type="radio"/>5) Я ответственный, и всегда добропорядочно выполняю свою работу</div>
+</div>
+
+
+<div class="quizsection">
+	<h2 style="font-size: 180%; text-align: center; margin-top: 15px; font-family: Star Jedi_Cyrillic; color: #ffffcc">9. Как Вы обычно беретесь за работу?</h2>
+  <div class="answer"><input name="q24" value="1" id="value1" type="radio"/>1) Делаю все в последний день, но искуссно ипровизирую и выхожу сухим из воды</div>
+	<div class="answer"><input name="q24" value="2" id="value2" type="radio"/>2) Тщательно все продумываю до мельчайших деталей</div>
+  <div class="answer"><input name="q24" value="3" id="value3" type="radio"/>3) Не перенапрягаю себя, но и не ленюсь больше, чем нужно</div>
+  <div class="answer"><input name="q24" value="4" id="value4" type="radio"/>4) Работаю скачками, из-за чего быстро устаю</div>
+</div>
+
+
+<div class="quizsection">
+	<h2 style="font-size: 180%; text-align: center; margin-top: 15px; font-family: Star Jedi_Cyrillic; color: #ffffcc">10. Знания - это... </h2>
+	<div class="answer"><input name="q25" value="1" id="value1" type="radio"/>1) Доступ к безграничной власти</div>
+	<div class="answer"><input name="q25" value="2" id="value2" type="radio"/>2) Совершенно бесполезная вещь без должного применения</div>
+  <div class="answer"><input name="q25" value="3" id="value3" type="radio"/>3) Великое наследие и источик силы</div>
+</div>
+
+<div id="button2"><input value="Смотреть результат" type="submit" style="font-size: 180%; font-family: Star Jedi_Cyrillic; background: #ffffcc; color: #00004d; margin-right: 25%; padding: 5px"/></div>
+
+</form>
+
+</section>
+
+<script type="text/javascript">// <![CDATA[
+
+   var result;
+
+   function check() {
+
+      var question;
+      var ani;
+      var asoka;
+      var han;
+      var lando;
+      var leya;
+      var luke;
+      var maul;
+      var obi;
+      var pal;
+      var rex;
+      var windu;
+      var yoda;
+
+      question = 1;
+      var ani = 0;
+      var asoka = 0;
+      var han = 0;
+      var lando = 0;
+      var leya = 0;
+      var luke = 0;
+      var maul = 0;
+      var obi = 0;
+      var pal = 0;
+      var rex = 0;
+      var windu = 0;
+      var yoda = 0;
+      result = "";
+
+      var choice;
+
+if (question == 1) {
+  var q = document.forms['quiz'].elements['q'+question];
+      for (var i = 0; i < q.length; i++) {
+          if (q[i].checked) {choice = q[i].value;}
+      }
+      if (choice == "1") { ani++; asoka++; maul = maul + 2; }
+      if (choice == "2") { luke++; han++; lando++; }
+      if (choice == "4") { obi = obi + 2; windu++; rex++; leya++; }
+      if (choice == "5") { yoda = yoda + 2; pal++; }
+}
+if (question == 2) {
+  var q = document.forms['quiz'].elements['q'+question];
+      for (var i = 0; i < q.length; i++) {
+          if (q[i].checked) {choice = q[i].value;}
+      }
+      if (choice == "1") { maul = maul + 2; pal++; }
+      if (choice == "2") { han++; lando++; ani++; asoka++; }
+      if (choice == "4") { luke++; windu++; obi = obi + 2; leya++; rex = rex + 3;}
+      if (choice == "5") {yoda = yoda + 2; }
+}
+if (question == 3) {
+  var q = document.forms['quiz'].elements['q'+question];
+      for (var i = 0; i < q.length; i++) {
+          if (q[i].checked) {choice = q[i].value;}
+      }
+      if (choice == "1") { maul++; pal++;}
+      if (choice == "2") { ani++; asoka++; han++; rex++; }
+      if (choice == "4") { obi++; windu++; luke++; yoda = yoda + 2; lando++;}
+      if (choice == "5") { leya++; yoda = yoda + 2; obi++;}
+}
+if (question == 4) {
+  var q = document.forms['quiz'].elements['q'+question];
+      for (var i = 0; i < q.length; i++) {
+          if (q[i].checked) {choice = q[i].value;}
+      }
+      if (choice == "1") { ani++; asoka++; maul++;}
+      if (choice == "2") { luke++; han++; }
+      if (choice == "4") { rex++; obi++; leya++; windu++; lando++;}
+      if (choice == "5") { pal++; yoda = yoda + 2; }
+}
+if (question == 5) {
+  var q = document.forms['quiz'].elements['q'+question];
+      for (var i = 0; i < q.length; i++) {
+          if (q[i].checked) {choice = q[i].value;}
+      }
+      if (choice == "1") { han++; lando++;}
+      if (choice == "2") { ani++; luke++; maul++;}
+      if (choice == "4") { obi++; windu++; leya++; asoka++; }
+      if (choice == "5") { rex = rex + 2; pal++; yoda = yoda + 2;}
+}
+if (question == 6) {
+  var q = document.forms['quiz'].elements['q'+question];
+      for (var i = 0; i < q.length; i++) {
+          if (q[i].checked) {choice = q[i].value;}
+      }
+      if (choice == "4") { luke++; ani++; yoda++;}
+      if (choice == "5") { asoka = asoka + 2; yoda++;}
+}
+if (question == 7) {
+  var q = document.forms['quiz'].elements['q'+question];
+      for (var i = 0; i < q.length; i++) {
+          if (q[i].checked) {choice = q[i].value;}
+      }
+      if (choice == "4") { han++; lando++; }
+      if (choice == "5") { han = han + 2; lando = lando + 2; }
+}
+if (question == 8) {
+  var q = document.forms['quiz'].elements['q'+question];
+      for (var i = 0; i < q.length; i++) {
+          if (q[i].checked) {choice = q[i].value;}
+      }
+      if (choice == "2") { han++; lando++; maul++; }
+      if (choice == "3") { ani++; luke++; asoka++; }
+      if (choice == "4") { obi++; leya++; rex++; }
+      if (choice == "5") { yoda = yoda + 3; pal++; windu++; obi++; }
+}
+if (question == 9) {
+  var q = document.forms['quiz'].elements['q'+question];
+      for (var i = 0; i < q.length; i++) {
+          if (q[i].checked) {choice = q[i].value;}
+      }
+      if (choice == "1") { obi++; windu++; yoda++;}
+      if (choice == "2") { leya++; ani++; asoka++; luke++; }
+      if (choice == "3") { rex++; }
+      if (choice == "4") { han++; maul++; lando++; }
+      if (choice == "5") { pal++; }
+}
+if (question == 10) {
+  var q = document.forms['quiz'].elements['q'+question];
+      for (var i = 0; i < q.length; i++) {
+          if (q[i].checked) {choice = q[i].value;}
+      }
+      if (choice == "1") { ani++; luke++; asoka++; }
+      if (choice == "2") { leya++; han++; lando++; }
+      if (choice == "3") { obi++; windu++; yoda++; pal++; }
+      if (choice == "4") { maul++; }
+      if (choice == "5") { rex++; }
+}
+if (question == 11) {
+  var q = document.forms['quiz'].elements['q'+question];
+      for (var i = 0; i < q.length; i++) {
+          if (q[i].checked) {choice = q[i].value;}
+      }
+      if (choice == "3") { asoka++; luke++; han++; lando++; yoda++; obi++; }
+      if (choice == "4") { windu++; pal++; rex++; leya++; maul++; ani++; }
+      if (choice == "5") { windu = windu + 2; pal = pal + 2; }
+}
+if (question == 12) {
+  var q = document.forms['quiz'].elements['q'+question];
+      for (var i = 0; i < q.length; i++) {
+          if (q[i].checked) {choice = q[i].value;}
+      }
+      if (choice == "4") { maul++; luke++; leya++; han++; lando++; rex++; }
+      if (choice == "5") { maul = maul + 2; luke = luke + 2; han++; }
+}
+if (question == 13) {
+  var q = document.forms['quiz'].elements['q'+question];
+      for (var i = 0; i < q.length; i++) {
+          if (q[i].checked) {choice = q[i].value;}
+      }
+      if (choice == "1") { pal = pal + 2; }
+      if (choice == "2") { pal++; }
+      if (choice == "4") { lando++; }
+      if (choice == "5") { lando = lando + 2; }
+}
+if (question == 14) {
+  var q = document.forms['quiz'].elements['q'+question];
+      for (var i = 0; i < q.length; i++) {
+          if (q[i].checked) {choice = q[i].value;}
+      }
+      if (choice == "2") { han++; }
+      if (choice == "4") { maul++; }
+      if (choice == "5") { maul = maul + 2; }
+}
+if (question == 15) {
+  var q = document.forms['quiz'].elements['q'+question];
+      for (var i = 0; i < q.length; i++) {
+          if (q[i].checked) {choice = q[i].value;}
+      }
+      if (choice == "4") { leya++; }
+      if (choice == "5") { leya = leya + 2; }
+}
+if (question == 16) {
+  var q = document.forms['quiz'].elements['q'+question];
+      for (var i = 0; i < q.length; i++) {
+          if (q[i].checked) {choice = q[i].value;}
+      }
+      if (choice == "1") { pal = pal + 5; windu = windu + 5; yoda = yoda + 5; maul = mail + 5;}
+      if (choice == "2") { asoka = asoka + 5; ani = ani + 5; lando = lando + 5; obi = obi + 5;}
+      if (choice == "3") { han = han + 5; lando = lando + 5; luke = luke + 3; maul = mail + 5; }
+      if (choice == "4") { leya = leya + 3; obi = obi + 5; }
+      if (choice == "5") { yoda = yoda + 5; }
+      if (choice == "6") { rex = rex + 5; luke = luke + 3; leya = leya + 5; }
+}
+if (question == 17) {
+  var q = document.forms['quiz'].elements['q'+question];
+      for (var i = 0; i < q.length; i++) {
+          if (q[i].checked) {choice = q[i].value;}
+      }
+      if (choice == "1") { ani = ani + 5; asoka = asoka + 5; }
+      if (choice == "2") { asoka = asoka + 5; luke = luke + 5; han = han + 5; lando = lando + 5; }
+      if (choice == "3") { maul = maul + 5; pal = pal + 5;  }
+      if (choice == "4") { pal = pal + 5; windu = windu + 5; }
+      if (choice == "5") { obi = obi + 5; rex = rex + 5; }
+      if (choice == "6") { leya = leya + 5; yoda = yoda + 5; }
+}
+if (question == 18) {
+  var q = document.forms['quiz'].elements['q'+question];
+      for (var i = 0; i < q.length; i++) {
+          if (q[i].checked) {choice = q[i].value;}
+      }
+      if (choice == "1") { rex = rex + 5; }
+      if (choice == "2") { ani = ani + 5; asoka = asoka + 5; luke = luke + 3; han = han + 5; lando = lando + 5;}
+      if (choice == "3") { obi = obi + 5; yoda = yoda + 5; maul++;  }
+}
+if (question == 19) {
+  var q = document.forms['quiz'].elements['q'+question];
+      for (var i = 0; i < q.length; i++) {
+          if (q[i].checked) {choice = q[i].value;}
+      }
+      if (choice == "1") { pal = pal + 5; }
+      if (choice == "2") { maul = maul + 5; han = han + 5; }
+      if (choice == "3") { obi = obi + 5; leya = leya + 4; rex = rex + 5; luke = luke + 3; }
+      if (choice == "4") { han = han + 5; asoka = asoka + 5; ani = ani + 5; }
+      if (choice == "5") { yoda = yoda + 6; windu = windu + 5; }
+}
+if (question == 20) {
+  var q = document.forms['quiz'].elements['q'+question];
+      for (var i = 0; i < q.length; i++) {
+          if (q[i].checked) {choice = q[i].value;}
+      }
+      if (choice == "1") { yoda = yoda + 6; windu = windu + 5; }
+      if (choice == "2") { leya = leya + 5; rex = rex + 5; }
+      if (choice == "3") { han = han + 5; lando = lando + 5; }
+      if (choice == "4") { asoka = asoka + 5; luke = luke + 5; }
+      if (choice == "5") { ani = ani + 5; maul = maul + 5; }
+      if (choice == "6") { pal = pal + 5; windu = windu + 5; }
+      if (choice == "7") { obi = obi + 5; }
+}
+if (question == 21) {
+  var q = document.forms['quiz'].elements['q'+question];
+      for (var i = 0; i < q.length; i++) {
+          if (q[i].checked) {choice = q[i].value;}
+      }
+      if (choice == "1") { yoda = yoda + 5; obi = obi + 5; }
+      if (choice == "2") { windu = windu + 5; lando = lando + 5; han = han + 5; leya = leya + 5; }
+      if (choice == "3") { pal = pal + 5; rex = rex + 3; }
+}
+if (question == 22) {
+  var q = document.forms['quiz'].elements['q'+question];
+      for (var i = 0; i < q.length; i++) {
+          if (q[i].checked) {choice = q[i].value;}
+      }
+      if (choice == "1") { yoda = yoda + 5; obi = obi + 5; rex++; }
+      if (choice == "2") { luke = luke + 5; asoka = asoka + 3; lando = lando + 3; }
+      if (choice == "3") { ani = ani + 5; han = han + 3; }
+}
+if (question == 23) {
+  var q = document.forms['quiz'].elements['q'+question];
+      for (var i = 0; i < q.length; i++) {
+          if (q[i].checked) {choice = q[i].value;}
+      }
+      if (choice == "1") { pal = pal + 5; leya = leya + 3; }
+      if (choice == "2") { luke = luke + 5; asoka = asoka + 5; ani = ani + 5; yoda = yoda + 4; }
+      if (choice == "3") { maul = maul + 5; luke = luke + 3; }
+      if (choice == "4") { han = han + 5; }
+      if (choice == "5") { leya = leya + 3; windu = windu + 3; rex = rex + 5; yoda = yoda + 4; obi = obi + 4;}
+}
+if (question == 24) {
+  var q = document.forms['quiz'].elements['q'+question];
+      for (var i = 0; i < q.length; i++) {
+          if (q[i].checked) {choice = q[i].value;}
+      }
+      if (choice == "1") { ani = ani + 5; lando = lando + 3; han = han + 3; rex = rex + 2; }
+      if (choice == "2") { rex = rex + 2; leya = leya + 2; obi = obi + 3; windu = windu + 5; }
+      if (choice == "3") { luke = luke + 3; asoka = asoka + 3; ani = ani - 3; }
+      if (choice == "4") { maul = maul + 5; }
+}
+if (question == 25) {
+  var q = document.forms['quiz'].elements['q'+question];
+      for (var i = 0; i < q.length; i++) {
+          if (q[i].checked) {choice = q[i].value;}
+      }
+      if (choice == "1") { pal = pal + 5; maul = maul + 3; }
+      if (choice == "2") { ani = ani + 5; luke = luke + 3; asoka = asoka + 2; }
+      if (choice == "3") { yoda = yoda + 5; obi = obi + 3; windu = windu + 3; }
+}
+
+
+var a = Math.max(ani, asoka, han, lando, leya, luke, maul, obi, pal, rex, windu, yoda);
+switch (a) {
+case ani:
+    result = "result_ani";
+break;
+case asoka:
+    result = "result_asoka";
+break;
+case han:
+    result = "result_han";
+break;
+case lando:
+    result = "result_lando";
+break;
+case leya:
+    result = "result_leya";
+break;
+case luke:
+    result = "result_luke";
+break;
+case maul:
+    result = "result_maul";
+break;
+case obi:
+    result = "result_obi";
+break;
+case pal:
+    result = "result_pal";
+break;
+case rex:
+    result = "result_rex";
+break;
+case windu:
+    result = "result_windu";
+break;
+case yoda:
+    result = "result_yoda";
+break;
+case 0:
+    result = "index";
+break;
+  default:
+    alert( "Никто..." );
+}
+
+      window.location = result + '.html';
+
+   }
+
+// ]]></script>
+
+
+<style>
+#pic {
+  margin-top: 80px;
+  margin-left: 480px;
+  border
+  }
+
+	body {
+		background: #000 url(pic_fon/fon2.jpg);
+		color: #fff;
+		background-attachment: fixed;
+		background-repeat: repeat-x;
+		background-size: 100%;
+	}
+
+ #answer {
+   font-size: 100%;
+   font-family: Star Jedi_Cyrillic;
+   background: #ffffcc; c
+   olor: #00004d;
+   padding: 5px
+
+ }
+
+ </style>
+
+<style>
+   .wrap div {
+    color: #ffffcc;
+    margin-left: 3%;
+  }
+</style>
+
+<div id="button1">
+<form action="index.html" target="_self">
+  <button style="font-size: 180%; font-family: Star Jedi_Cyrillic; background: #ffffcc; color: #00004d; margin-left: 25%; padding: 5px">Вернуться в меню</button>
+</form>
+</div>
+
+
+
+<style>
+#button1 {
+  margin-top: 40px;
+  margin-bottom: 100px;
+  float: left;
+  width: 550px;
+  }
+
+#button2 {
+    margin-top: 40px;
+    float: right;
+    width: 550px;
+    margin-bottom: 100px;
+
+
+  }
+</style>
+</body>
+</html>
